@@ -1,0 +1,129 @@
+body{
+    background:linear-gradient(45deg, #1d2671, #c33764);;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Form Container */
+.container{
+    width:500px;
+    margin:130px auto;
+    background:#e6c6c1;
+    padding:25px 40px;
+    border-radius:8px;
+    box-shadow:0 0 15px rgba(0,0,0,0.5);
+    transition:0.3s;
+}
+
+.container.blur{
+    filter:blur(5px);
+}
+
+/* Heading */
+h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+/* Form Groups */
+.form-group{
+    margin-bottom:12px;
+    display:flex;
+    align-items:center;
+}
+
+.form-group label{
+    width:130px;
+    font-size:14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    flex:1;
+    padding:6px;
+    border:1px solid #aaa;
+    border-radius:4px;
+}
+
+.name-group{
+    display:flex;
+    gap:5px;
+}
+
+.small-input{
+    width:60px;
+}
+
+.gender-group,
+.dept-group{
+    display:flex;
+    gap:10px;
+}
+
+/* Button */
+button{
+    display:block;
+    margin:15px auto 0;
+    padding:6px 20px;
+    cursor:pointer;
+    border:none;
+    border-radius:4px;
+    background:#333;
+    color:white;
+}
+
+button:hover{
+    background:#555;
+}
+
+.error{
+    text-align:center;
+    color:red;
+    font-size:13px;
+}
+
+/* Success Popup */
+.success-card{
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) scale(0);
+    background:white;
+    width:320px;
+    padding:25px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 0 20px rgba(0,0,0,0.4);
+    transition:0.3s ease;
+    z-index:1000;
+}
+
+.success-card.active{
+    transform:translate(-50%,-50%) scale(1);
+}
+
+/* Green Tick */
+.tick{
+    font-size:50px;
+    color:green;
+    animation:pop 0.4s ease;
+}
+
+@keyframes pop{
+    0%{transform:scale(0);}
+    100%{transform:scale(1);}
+}
+
+.success-card h3{
+    margin:10px 0;
+}
+
+.success-card p{
+    font-size:14px;
+    color:#444;
+}
+
+.success-card button{
+    margin-top:10px;
+    background:green;
+}
